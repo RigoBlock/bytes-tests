@@ -1,28 +1,10 @@
 # bytes-tests
 
-kovan address: 0x4e4a1e1049e9c059fd40d08d0822f3109399447a
+kovan address: 0x78003a7d48dfc1e1dab28ed2e6a7c66074ae0607
 
 ABI
 ```
 [
-	{
-		"constant": false,
-		"inputs": [
-			{
-				"name": "target",
-				"type": "address"
-			},
-			{
-				"name": "data",
-				"type": "bytes"
-			}
-		],
-		"name": "assembleCall",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
 	{
 		"constant": false,
 		"inputs": [
@@ -85,12 +67,66 @@ ABI
 		"constant": false,
 		"inputs": [
 			{
+				"name": "target",
+				"type": "address"
+			},
+			{
+				"name": "functionName",
+				"type": "bytes"
+			},
+			{
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "keccakInput",
+		"outputs": [
+			{
+				"name": "method",
+				"type": "bytes4"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
 				"name": "_exchange",
 				"type": "address"
 			}
 		],
 		"name": "setExchange",
 		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "target",
+				"type": "address"
+			},
+			{
+				"name": "shaOfFunction",
+				"type": "bytes32"
+			},
+			{
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "shaInput",
+		"outputs": [
+			{
+				"name": "method",
+				"type": "bytes4"
+			}
+		],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
